@@ -1,0 +1,62 @@
+//定义所有版本号以及第三方依赖包
+ext {
+    //sdk版本
+    COMPILE_SDK_VERSION         = 28
+    BUILD_TOOLS_VERSION         = '28.0.3'
+    MIN_SDK_VERSION             = 21
+    TARGET_SDK_VERSION          = 28
+
+    //app版本
+    APP_VERSION = [
+            applicationId       : "com.qinyaoz.componentdemo",
+            versionCode         : '1',
+            versionName         : '1.0.0'
+    ]
+
+    //gradle依赖路径
+    def gradleDir = rootDir.absolutePath + "/dependent/"
+    GRADLES = [
+            baseConfig          : gradleDir + "baseConfig.gradle",
+            processor           : gradleDir + "processor.gradle",
+            keystore            : gradleDir + "keystore.gradle"
+    ]
+
+    //support 库版本
+    SUPPORT_VERSION = '28.0.0'
+    CONSTRAINT_VERSION = '1.1.3'
+    SUPPORT_DEPS = [
+            supportV4           : "com.android.support:support-v4:${SUPPORT_VERSION}",
+            supportV13          : "com.android.support:support-v13:${SUPPORT_VERSION}",
+            appcompatV7         : "com.android.support:appcompat-v7:${SUPPORT_VERSION}",
+            cardview            : "com.android.support:cardview-v7:${SUPPORT_VERSION}",
+            recyclerView        : "com.android.support:recyclerview-v7:${SUPPORT_VERSION}",
+            design              : "com.android.support:design:${SUPPORT_VERSION}",
+            annotations         : "com.android.support:support-annotations:${SUPPORT_VERSION}",
+            constraintLayout    : "com.android.support.constraint:constraint-layout:${CONSTRAINT_VERSION}"
+    ]
+
+    //multidex相关
+    MULTIDEX_VERSION = '1.0.1'
+    MULTIDEX_DEPS = [
+            multidex            : "com.android.support:multidex:${MULTIDEX_VERSION}"
+    ]
+
+    //开源view相关
+    VIEWDEPS = [
+
+    ]
+
+    //第三方其他依赖包
+    DEVDEPS = [
+            javapoet            : "com.squareup:javapoet:1.8.0",
+            autoService         : "com.google.auto.service:auto-service:1.0-rc3",
+            butterknife         : "com.jakewharton:butterknife:10.1.0",
+            arouter             : "com.alibaba:arouter-api:1.4.1"
+    ]
+
+    //第三方Compiler
+    COMPILER_DEPS = [
+            butterknife         : "com.jakewharton:butterknife-compiler:10.1.0",
+            arouter             :   "com.alibaba:arouter-compiler:1.2.2"
+    ]
+}

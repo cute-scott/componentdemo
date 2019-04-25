@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: "${GRADLES.baseConfig}"
+apply from: "${GRADLES.processor}"
+
+android {
+    resourcePrefix 'base_'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api "${SUPPORT_DEPS.appcompatV7}"
+    api "${DEVDEPS.autoService}"
+    api "${DEVDEPS.butterknife}"
+    api "${MULTIDEX_DEPS.multidex}"
+    api "${DEVDEPS.arouter}"
+}

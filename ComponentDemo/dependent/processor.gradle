@@ -1,0 +1,18 @@
+// 将所有的apt插件库统一加入。
+apply plugin: 'kotlin-kapt'
+// butterknife的gradle插件。
+if (project.plugins.hasPlugin("com.android.library")) {
+    apply plugin: 'com.jakewharton.butterknife'
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    kapt "${COMPILER_DEPS.butterknife}"
+    kapt "${COMPILER_DEPS.arouter}"
+}

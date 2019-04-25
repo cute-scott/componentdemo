@@ -1,0 +1,18 @@
+apply plugin: 'com.android.application'
+apply from: "${GRADLES.baseConfig}"
+apply from: "${GRADLES.processor}"
+
+android {
+    defaultConfig {
+        applicationId "${APP_VERSION.applicationId}"
+    }
+
+    resourcePrefix 'app_'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':business:main')
+    api "${SUPPORT_DEPS.appcompatV7}"
+    api "${SUPPORT_DEPS.constraintLayout}"
+}

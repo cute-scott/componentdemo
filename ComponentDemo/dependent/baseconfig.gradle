@@ -1,0 +1,52 @@
+// 各个组件所使用的基本配置。定义在此。便于对多版本进行统一修改更新
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion Integer.parseInt("${COMPILE_SDK_VERSION}")
+    buildToolsVersion "${BUILD_TOOLS_VERSION}"
+
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt("${MIN_SDK_VERSION}")
+        targetSdkVersion Integer.parseInt("${TARGET_SDK_VERSION}")
+
+        versionCode Integer.parseInt("${APP_VERSION.versionCode}")
+        versionName "${APP_VERSION.versionName}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions{
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+
+    }
+
+}
+
+// 当模块为application时。启用证书打包。
+if (project.plugins.hasPlugin('com.android.application')) {
+    apply from: "${GRADLES.keystore}"
+}
