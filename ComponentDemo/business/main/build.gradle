@@ -10,5 +10,5 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
     api project(':functional:share')
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    api "${SUPPORT_DEPS.constraintLayout}"
 }

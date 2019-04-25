@@ -10,7 +10,12 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api "${SUPPORT_DEPS.appcompatV7}"
     api "${DEVDEPS.autoService}"
-    api "${DEVDEPS.butterknife}"
+    api ("${DEVDEPS.butterknife}") {
+        exclude group: 'com.android.support:multidex'
+        exclude group: 'androidx.core'
+    }
     api "${MULTIDEX_DEPS.multidex}"
-    api "${DEVDEPS.arouter}"
+    api ("${DEVDEPS.arouter}") {
+        exclude group: 'com.android.support'
+    }
 }
