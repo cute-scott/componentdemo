@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:name=".AppApplication"
         android:theme="@style/AppTheme">
-        <activity android:name=".AppActivity">
+        <activity android:name="com.qinyaoz.hongya.ui.activity.IndexActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
