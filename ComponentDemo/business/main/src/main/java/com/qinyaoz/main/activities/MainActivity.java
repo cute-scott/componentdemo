@@ -11,7 +11,7 @@ import com.qinyaoz.main.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-@Route(path = RouterConstants.BizMain.main)
+@Route(path = RouterConstants.BizMain.MAIN)
 public class MainActivity extends AppCompatActivity {
     @BindView(R2.id.main_textview)
     public TextView textView;

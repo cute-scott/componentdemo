@@ -7,7 +7,7 @@ import com.qinyaoz.baselib.protocol.dispatcher.AbstractComponentBoot;
 public class MainComponentBoot extends AbstractComponentBoot {
     @Override
     public String getName() {
-        return "main";
+        return "MAIN";
     }
 
     @Override

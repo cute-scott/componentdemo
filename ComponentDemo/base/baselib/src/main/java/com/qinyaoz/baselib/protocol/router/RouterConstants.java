@@ -6,6 +6,6 @@ package com.qinyaoz.baselib.protocol.router;
  **/
 public interface RouterConstants {
     interface BizMain {
-        String main = "/business/main/main";
+        String MAIN = "/business/MAIN/MAIN";
     }
 }
