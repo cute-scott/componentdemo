@@ -1,6 +1,6 @@
 package com.qinyaoz.baselib.protocol.dispatcher;
 
-import android.content.Context;
+import android.app.Application;
 import android.content.res.Configuration;
 
 import java.util.Collections;
@@ -8,21 +8,24 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.ServiceLoader;
 
+/**
+ * 组件初生命周期分发器
+ */
 public class ComponentBootDispatcher {
     private static ComponentBootDispatcher instance = new ComponentBootDispatcher();
     public static ComponentBootDispatcher getInstance() {
         return instance;
     }
 
-    private Context applicationContext;
+    private Application application;
 
     private LinkedList<AbstractComponentBoot> container = new LinkedList<>();
 
     /**
      * 初始化所有组件的boot，从这里启动所有组件的初始化工作
      */
-    private void init(Context context) {
-        applicationContext = context.getApplicationContext();
+    private void init(Application context) {
+        application = context;
         /*List<Class> componentClassList = null;
         try {
             componentClassList = ClassesUtil.getAllClassesByBase(AbstractComponentBoot.class);
@@ -41,11 +44,11 @@ public class ComponentBootDispatcher {
         Collections.sort(container, new ComponentBootComparator());
     }
 
-    public Context getApplicationContext() {
-        return applicationContext;
+    public Application getApplication() {
+        return application;
     }
 
-    void attachBaseContext(Context context) {
+    void attachBaseContext(Application context) {
         init(context);
         for (AbstractComponentBoot componentBoot : container) {
             componentBoot.attachBaseContext(context);

@@ -1,16 +1,18 @@
 package com.qinyaoz.baselib.mvp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by haoyuew on 16/4/1.
  */
-public abstract class BaseActivity<P extends BasePresenter, V extends BaseView> extends Activity {
+public abstract class BaseActivity<P extends BasePresenter, V extends BaseView> extends AppCompatActivity {
     private static final String TAG = BaseActivity.class.getSimpleName();
 
     protected P mPresenter;
@@ -21,7 +23,11 @@ public abstract class BaseActivity<P extends BasePresenter, V extends BaseView> 
         if (isNeedCustomTheme() != -1) {
             setTheme(isNeedCustomTheme());
         }
+        setContentView(getLayoutId());
+        ButterKnife.bind(this);
     }
+
+    protected abstract int getLayoutId();
 
     @Override
     public void finish() {
@@ -103,17 +109,8 @@ public abstract class BaseActivity<P extends BasePresenter, V extends BaseView> 
      */
     public abstract void initPages();
 
-    /**
-     * 设置页面的布局文件,返回布局文件的id数值,例如R.layout.index
-     *
-     * @return
-     */
-    protected abstract int setLayoutId();
-
     public boolean isHandlerValid(Handler handler) {
-        return !(null == handler
-                || null == BaseActivity.this
-                || BaseActivity.this.isFinishing());
+        return !(null == handler || BaseActivity.this.isFinishing());
     }
 
     protected static boolean hasGetPrize = false;
@@ -130,5 +127,6 @@ public abstract class BaseActivity<P extends BasePresenter, V extends BaseView> 
     protected void onSaveInstanceState(Bundle outState) {
         //处理崩溃后Fragment重叠的问题
         //super.onSaveInstanceState(outState);
+        super.onSaveInstanceState(outState);
     }
 }

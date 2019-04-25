@@ -8,7 +8,7 @@ public abstract class AbstractApplication extends MultiDexApplication {
     @Override
     protected void attachBaseContext(Context context) {
         super.attachBaseContext(context);
-        ComponentBootDispatcher.getInstance().attachBaseContext(context);
+        ComponentBootDispatcher.getInstance().attachBaseContext(this);
     }
 
     @Override

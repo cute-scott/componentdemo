@@ -1,6 +1,6 @@
 package com.qinyaoz.baselib.protocol.dispatcher;
 
-import android.content.Context;
+import android.app.Application;
 import android.content.res.Configuration;
 import android.util.Log;
 public abstract class AbstractComponentBoot implements ComponentLifecycleCallbacks{
@@ -12,7 +12,7 @@ public abstract class AbstractComponentBoot implements ComponentLifecycleCallbac
     public abstract String getName();
 
     @Override
-    public void attachBaseContext(Context context) {
+    public void attachBaseContext(Application context) {
         Log.i(TAG, getName() + ": attachBaseContext called");
     }
 

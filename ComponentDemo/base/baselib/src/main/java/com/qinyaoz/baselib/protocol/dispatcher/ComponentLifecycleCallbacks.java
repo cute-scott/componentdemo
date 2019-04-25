@@ -1,5 +1,6 @@
 package com.qinyaoz.baselib.protocol.dispatcher;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.support.annotation.IntDef;
@@ -36,7 +37,7 @@ public interface ComponentLifecycleCallbacks {
 
     @Priority int getPriority();
 
-    void attachBaseContext(Context context);
+    void attachBaseContext(Application context);
     void onCreate();
     void onTerminate();
     void onConfigurationChanged(Configuration newConfig);
