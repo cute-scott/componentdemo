@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/base/imageloader" />
             <option value="$PROJECT_DIR$/base/network" />
             <option value="$PROJECT_DIR$/business" />
+            <option value="$PROJECT_DIR$/business/hongya" />
             <option value="$PROJECT_DIR$/business/main" />
             <option value="$PROJECT_DIR$/functional" />
             <option value="$PROJECT_DIR$/functional/commonui" />

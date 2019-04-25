@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+apply from: "${GRADLES.baseConfig}"
+apply from: "${GRADLES.processor}"
+
+android {
+    resourcePrefix 'hy_'
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':base:baselib')
+}
