@@ -29,7 +29,7 @@ public class AppActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.app_btn:
-                ARouter.getInstance().build(RouterConstants.BizMain.MAIN).navigation();
+                ARouter.getInstance().build(RouterConstants.HongYa.INDEX).navigation();
                 break;
             case R.id.app_btn2:
                 businessMainProvider.test("provider test");

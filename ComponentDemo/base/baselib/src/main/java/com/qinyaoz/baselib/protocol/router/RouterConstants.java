@@ -8,4 +8,8 @@ public interface RouterConstants {
     interface BizMain {
         String MAIN = "/business/MAIN/MAIN";
     }
+
+    interface HongYa {
+        String INDEX = "/business/hongya/index";
+    }
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="cui_TabLayout">
+        <attr name="cui_tabIndicatorColor" format="color" />
+        <attr name="cui_tabIndicatorHeight" format="dimension" />
+        <attr name="cui_tabIndicatorWidth" format="dimension" />
+        <attr name="cui_tabContentStart" format="dimension" />
+        <attr name="cui_tabBackground" format="reference" />
+        <attr name="cui_tabIndicator" format="reference" />
+        <attr name="cui_tabIndicatorGravity">
+
+            <enum name="bottom" value="0" />
+
+            <enum name="center" value="1" />
+
+            <enum name="top" value="2" />
+
+            <enum name="stretch" value="3" />
+        </attr>
+
+        <attr name="cui_tabIndicatorMode">
+
+            <enum name="line" value="0" />
+
+            <enum name="rectangle" value="1" />
+        </attr>
+        <attr name="cui_tabIndicatorAnimationDuration" format="integer" />
+        <attr name="cui_tabIndicatorFullWidth" format="boolean" />
+        <attr name="cui_tabUseIndicatorColor" format="boolean" />
+        <attr name="cui_tabMode">
+            <enum name="scrollable" value="0" />
+            <enum name="fixed" value="1" />
+        </attr>
+        <attr name="cui_tabGravity">
+            <enum name="fill" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="cui_tabInlineLabel" format="boolean" />
+        <attr name="cui_tabMinWidth" format="dimension" />
+        <attr name="cui_tabMaxWidth" format="dimension" />
+        <attr name="cui_tabTextAppearance" format="reference" />
+        <attr name="cui_tabTextColor" format="color" />
+        <attr name="cui_tabSelectedTextColor" format="color" />
+        <attr name="cui_tabPaddingStart" format="dimension" />
+        <attr name="cui_tabPaddingTop" format="dimension" />
+        <attr name="cui_tabPaddingEnd" format="dimension" />
+        <attr name="cui_tabPaddingBottom" format="dimension" />
+        <attr name="cui_tabPadding" format="dimension" />
+        <attr name="cui_tabIconTint" format="color" />
+        <attr name="cui_tabIconTintMode">
+            <enum name="src_over" value="3" />
+            <enum name="src_in" value="5" />
+            <enum name="src_atop" value="9" />
+            <enum name="multiply" value="14" />
+            <enum name="screen" value="15" />
+            <enum name="add" value="16" />
+        </attr>
+        <attr name="cui_tabRippleColor" format="color" />
+        <attr name="cui_tabUnboundedRipple" format="boolean" />
+    </declare-styleable>
+
+</resources>

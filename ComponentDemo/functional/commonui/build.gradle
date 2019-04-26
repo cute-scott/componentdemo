@@ -9,4 +9,5 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api project(':base:baselib')
+    api "${SUPPORT_DEPS.design}"
 }
