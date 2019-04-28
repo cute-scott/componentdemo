@@ -11,8 +11,6 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/base/baselib" />
-            <option value="$PROJECT_DIR$/base/imageloader" />
-            <option value="$PROJECT_DIR$/base/network" />
             <option value="$PROJECT_DIR$/business" />
             <option value="$PROJECT_DIR$/business/hongya" />
             <option value="$PROJECT_DIR$/business/main" />

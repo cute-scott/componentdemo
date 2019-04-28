@@ -1,5 +1,5 @@
 include ':app'
-include ':base:baselib', ':base:network', 'base:imageloader'
+include ':base:baselib'
 include ':functional:commonui', ':functional:share'
 include ':business:main', ':business:hongya'
 
