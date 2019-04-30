@@ -25,7 +25,7 @@ public class AppActivity extends AppCompatActivity {
         ARouter.getInstance().inject(this);
     }
 
-    @OnClick({R.id.app_btn, R.id.app_btn2})
+    @OnClick({R.id.app_btn, R.id.app_btn2, R.id.app_btn3})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.app_btn:
@@ -33,6 +33,9 @@ public class AppActivity extends AppCompatActivity {
                 break;
             case R.id.app_btn2:
                 businessMainProvider.test("provider test");
+                break;
+            case R.id.app_btn3:
+                ARouter.getInstance().build(RouterConstants.HongYa.PHOTO).navigation();
                 break;
         }
     }

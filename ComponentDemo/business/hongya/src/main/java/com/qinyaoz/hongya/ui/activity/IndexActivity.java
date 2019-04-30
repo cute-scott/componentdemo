@@ -14,6 +14,7 @@ import com.qinyaoz.commonui.view.tablayout.TabLayout;
 import com.qinyaoz.hongya.R;
 import com.qinyaoz.hongya.R2;
 import com.qinyaoz.hongya.ui.fragment.BlankFragment;
+import com.qinyaoz.hongya.widget.My3DPageTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,8 @@ public class IndexActivity extends AppCompatActivity {
         BlankFragmentPagerAdapter adapter = new BlankFragmentPagerAdapter(getSupportFragmentManager(), fragments);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(adapter);
+        viewPager.setPageTransformer(false, new My3DPageTransformer());
+        viewPager.setOffscreenPageLimit(2);
 
     }
 

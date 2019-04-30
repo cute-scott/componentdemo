@@ -11,5 +11,6 @@ public interface RouterConstants {
 
     interface HongYa {
         String INDEX = "/hongya/index";
+        String PHOTO = "/hongya/photo";
     }
 }
