@@ -4,6 +4,9 @@ apply from: "${GRADLES.processor}"
 
 android {
     resourcePrefix 'base_'
+    dataBinding {
+        enabled = true;
+    }
 }
 
 dependencies {

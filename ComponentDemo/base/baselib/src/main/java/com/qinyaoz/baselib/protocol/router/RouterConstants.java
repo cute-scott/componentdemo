@@ -6,10 +6,10 @@ package com.qinyaoz.baselib.protocol.router;
  **/
 public interface RouterConstants {
     interface BizMain {
-        String MAIN = "/business/MAIN/MAIN";
+        String MAIN = "/main/main";
     }
 
     interface HongYa {
-        String INDEX = "/business/hongya/index";
+        String INDEX = "/hongya/index";
     }
 }

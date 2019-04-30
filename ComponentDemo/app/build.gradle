@@ -13,6 +13,7 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api project(':business:hongya')
+    api project(':business:main')
     api "${SUPPORT_DEPS.appcompatV7}"
     api "${SUPPORT_DEPS.constraintLayout}"
 }

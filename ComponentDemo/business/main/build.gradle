@@ -9,6 +9,6 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
-    api project(':functional:share')
+    api project(':base:baselib')
     api "${SUPPORT_DEPS.constraintLayout}"
 }

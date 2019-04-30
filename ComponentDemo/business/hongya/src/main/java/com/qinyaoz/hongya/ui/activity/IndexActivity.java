@@ -28,6 +28,8 @@ public class IndexActivity extends AppCompatActivity {
     @BindView(R2.id.hy_viewpager)
     ViewPager viewPager;
 
+    int[] ids = new int[] {R.mipmap.guide0, R.mipmap.guide1, R.mipmap.guide2, R.mipmap.guide3};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +37,10 @@ public class IndexActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         List<Fragment> fragments = new ArrayList<>();
-        for (int i = 01; i <= 4; i++) {
+        for (int i = 1; i <= 4; i++) {
             BlankFragment fragment = new BlankFragment();
             fragment.setName("这是第" + i + "个fragment");
+            fragment.setImgResId(ids[i % ids.length]);
             fragments.add(fragment);
         }
 
