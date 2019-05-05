@@ -60,4 +60,17 @@
         <attr name="cui_tabUnboundedRipple" format="boolean" />
     </declare-styleable>
 
+
+    <declare-styleable name="cui_textswitcher">
+        <attr name="cui_textSize" format="dimension" />
+        <attr name="cui_textColor" format="color" />
+        <attr name="cui_inAnimation" format="reference"/>
+        <attr name="cui_outAnimation" format="reference"/>
+        <attr name="cui_duration" format="integer"/>
+        <attr name="cui_gravity">
+            <flag name="right" value="0x01" />
+            <flag name="left" value="0x02" />
+            <flag name="center" value="0x03" />
+        </attr>
+    </declare-styleable>
 </resources>

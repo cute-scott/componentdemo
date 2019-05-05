@@ -5,33 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AppActivity">
-    <Button
-        android:id="@+id/app_btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/app_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"/>
-
-    <Button
-        android:id="@+id/app_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump"
-        app:layout_constraintTop_toBottomOf="@id/app_btn2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-    <Button
-        android:id="@+id/app_btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Photo"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_btn" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-
+    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>
